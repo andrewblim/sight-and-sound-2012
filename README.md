@@ -54,3 +54,8 @@ You can dump the data into CSV files with the SQLite commands:
     .output stdout  -- to switch it back, in case you forget
 
 There are probably also a number of applications/add-ins out there that will read an SQLite database straight into your favorite spreadsheet program more cleanly. 
+
+To-do
+-----
+
+If I'm feeling ambitious about this, at some point I may try to link the titles up with a movie data API (probably Rotten Tomatoes; I don't think IMDb offers an API) to make better analysis easier. 
