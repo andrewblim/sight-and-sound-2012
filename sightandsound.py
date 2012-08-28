@@ -7,6 +7,10 @@ import urllib2
 
 
 def scrapeFilms(url, conn, verbose=False):
+    """
+    Scrapes films from the URL (should be the full film list) and adds them to
+    the database indicated by conn. 
+    """
     
     print "Processing films..."
     
@@ -79,6 +83,11 @@ def scrapeFilms(url, conn, verbose=False):
 
 
 def scrapeVoters(url, conn, scrape_ballot=False, verbose=False):
+    """
+    Scrapes voter info from the URL (should be the full voter list) and adds
+    them to the database indicated by conn. If scrape_ballot is True, also 
+    runs scrapeBallot on each voter page. 
+    """
     
     print "Processing voters..."
     
@@ -135,6 +144,12 @@ def scrapeVoters(url, conn, scrape_ballot=False, verbose=False):
 
 
 def scrapeBallot(url, conn, voter_id, verbose=False):
+    """
+    Scrapes ballot info from the URL (should be one of the voters' ballot 
+    pages) and adds it to the database indicated by conn, in the row indicated
+    by voter_id. Only film_ids are added, so this is not useful unless you've
+    also added film data to the db with scrapeFilms. 
+    """
     
     c = conn.cursor()
     
