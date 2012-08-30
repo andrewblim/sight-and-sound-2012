@@ -7,12 +7,14 @@ About
 
 This is a simple scraper program to download the contents from the Sight & Sound 2012 Poll, as published in the format on the [BFI's web page](http://explore.bfi.org.uk/sightandsoundpolls/2012/), into an SQLite database. 
 
+License: MIT, included in `license.txt`.
+
 Requirements
 ------------
 
 I used the following, but any reasonably up-to-date versions should be OK: 
 
-- [Python](http://www.python.org/) 2.7
+- [Python](http://www.python.org/) 2.7.3
 - [SQLite](http://www.sqlite.org/) 3.7.13
 - [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) 4.1.3 (older than 4.1.2 won't work due to usage of `class_`)
 
