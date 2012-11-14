@@ -24,7 +24,7 @@ def scrapeFilms(url, conn, verbose=False):
     conn.commit()
     
     soup = BeautifulSoup(urllib2.urlopen(url))
-    film_blocks = soup.find_all("div", class_="sas-all-films-group")
+    film_blocks = soup.find_all("div", "sas-all-films-group")
     
     for film_block in film_blocks:
         film_rows = film_block.find("table").find_all("tr")
@@ -103,7 +103,7 @@ def scrapeVoters(url, conn, scrape_ballot=False, verbose=False):
     conn.commit()
     
     soup = BeautifulSoup(urllib2.urlopen(url))
-    voter_blocks = soup.find_all("div", class_="sas-all-films-group")
+    voter_blocks = soup.find_all("div", "sas-all-films-group")
     
     for voter_block in voter_blocks:
         voter_rows = voter_block.find("table").find_all("tr")
@@ -154,7 +154,7 @@ def scrapeBallot(url, conn, voter_id, verbose=False):
     c = conn.cursor()
     
     soup = BeautifulSoup(urllib2.urlopen(url))
-    ballot_rows = soup.find("div", class_="sas-voter-details-votes").find("table").find_all("tr")
+    ballot_rows = soup.find("div", "sas-voter-details-votes").find("table").find_all("tr")
     if len(ballot_rows) > 12:
         raise Exception("More than 12 films on ballot " + url)
     
