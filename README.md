@@ -16,7 +16,7 @@ I used the following, but any reasonably up-to-date versions should be OK:
 
 - [Python](http://www.python.org/) 2.7.3
 - [SQLite](http://www.sqlite.org/) 3.7.13
-- [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) 4.1.3 (older than 4.1.2 won't work due to usage of `class_`)
+- [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) 4.1.3
 
 Usage
 -----
